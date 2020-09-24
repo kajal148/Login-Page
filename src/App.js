@@ -71,15 +71,18 @@ class App extends Component {
     const formSubmit = {
       color: "white",
       width:"326px",
-      backgroundColor: "#4682b4",
+      backgroundColor: "#00b9b7",
       padding: "12px",
       fontFamily: "Arial",
       outline:"none",
+      margin:"10px",
       border:"none"
     };
 
     return (
       <div className="App">
+       <img style={{marginTop:"10px"}} src={require('./bobble.png')} />
+        <br/>
         <h3  style={textSign}>SIGN UP</h3>
         <p style={textCreate}>Create An Account</p>
 
@@ -116,6 +119,7 @@ class App extends Component {
         <input style={formInput}  value={this.state.pass} onChange={this.onPassChange.bind(this)} type="password" name="pass" placeholder="Password..." required></input>
         <br />
         <br/>
+        <p style={{fontSize:"12px",color:"#898989"}}> By Clicking Sign up, you agree to our <span style={{color:"#00b9b7"}}>Terms of use</span> and <span style={{color:"#00b9b7"}}>Privacy Policies</span></p>
         <input style={formSubmit} type="submit" name="signup" placeholder="Submit"></input>
       </form>
 
